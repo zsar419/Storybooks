@@ -48,7 +48,7 @@ Connect-Flash:
 - Module: https://github.com/jaredhanson/connect-flash
 - npm install --save connect-flash
 
-Passport:
++Passport:
 - Module: http://passportjs.org/docs
 - npm install --save passport
 - NodeJS authentication library
@@ -58,6 +58,9 @@ Passport:
     - webtokens
     - local authentication (storing/retrieving user data to/from db)
     - SAML
+    Google auth strategy:
+        - Module: https://github.com/jaredhanson/passport-google-oauth2
+        - npm install --save passport-google-oauth20
 
 BcryptJS:
 - Module: https://www.npmjs.com/package/bcryptjs
@@ -68,17 +71,9 @@ BcryptJS:
         - npm install --save passport-local
 
 
+
+
+
 ## Deployment procedure ##
 - Mlab DB: used for prod deployments
 - MongoDB: used for local deployments
-
-Heroku deployment procedure:
-- git init
-- git add .
-- git commit -am <message>
-
-- Heroku setup:
-    - heroku login
-    - heroku create
-    - heroku git:remote -a <repo name obtained from heroku create>
-    - git push heroku master
