@@ -1,0 +1,30 @@
+<h1>Stories</h1>
+ <div class="row">
+     {{#each stories}}
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    {{#if user}}
+                        <!-- user.id is story.user.id since we are in story scope -->
+                        <!-- ../user.id is global user id of logged in user -->
+                        {{{editIcon user.id ../user.id id }}} <!-- We use triple brace because we want to parse in html -->
+                    {{/if}}
+                </div>
+                <div class="card-content center-align">
+                    <h5>{{title}}</h5>
+                    <p class="story-text">{{stripTags (truncate body 150)}}</p>    <!-- Running hbs helper function -->
+                    <br>
+                    <div class="chip">
+                        <img src="{{user.image}}">
+                        <a href="/stories/user/{{user.id}}">{{user.firstName}} {{user.lastName}}</a>
+                    </div>
+                </div>
+                <div class="card-action center-align">
+                    <a class="btn grey" href="/stories/show/{{id}}">Read More</a>
+                </div>
+            </div>
+        </div>
+     {{else}}
+        <p>No Stories Found</p>
+     {{/each}}
+ </div>
