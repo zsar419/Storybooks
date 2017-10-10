@@ -1,5 +1,5 @@
 # Storybooks
-### (insert web link here) ###
+### https://thawing-gorge-80494.herokuapp.com ###
 
 ## Application ##
 A simple application which allows you to share stories (blogs)
@@ -11,53 +11,53 @@ A simple application which allows you to share stories (blogs)
     - Bcrypt - password hashing for secure storage
 
 ## Libraries used ##
-+ExpressJS:
+ExpressJS:
 - npm install --save express
 - Middleware:
     - Functions which have access to the request (req) and response (res) objects
     - http://expressjs.com/en/guide/using-middleware.html
 
 
-+Handlebars (express middleware):
+Handlebars (express middleware):
 - Express handlebars module: https://github.com/ericf/express-handlebars (optimized for express js)
 - Server templating engine
 - Rendering templates on the server
     - npm install  --save express-handlebars
 - Express-Handlebars uses views directory
 
-+Mongoose (database connector):
+Mongoose (database connector):
 - npm install --save mongoose
 - Decleration of models and schemas, allows us to connect to local (mongoDB) or remote (mlab) database
 
-+Express-session:
+Express-session:
 - Module: https://github.com/expressjs/session
 - npm install --save express-session
 
-+Cookie-parser (express middleware):
+Cookie-parser (express middleware):
 - Module: https://www.npmjs.com/package/cookie-parser
 - npm install --save cookie-parser
 
-+Body-parser (express middleware):
+Body-parser (express middleware):
 - Module: https://github.com/expressjs/body-parser
 - Allows us to retrieve form body data (sumitted) and send it in http response
 - npm install --save body-parser
 
-+Moment
+Moment
 - Module: https://momentjs.com
 - Used for formatting dates
 - npm install --save moment
 
-+Method-override:
+Method-override:
 - Module: https://github.com/expressjs/method-override
 - Forms can only have method=get/post, this allows forms to use methods put and delete
 - Using this forms can send put request to api which can then process that form and send back response (render new page)
 - npm install --save method-override
 
-Connect-Flash:
+Connect-Flash (UNUSED - use for site improvement to display helpful messages):
 - Module: https://github.com/jaredhanson/connect-flash
 - npm install --save connect-flash
 
-+Passport:
+Passport:
 - Module: http://passportjs.org/docs
 - npm install --save passport
 - NodeJS authentication library
@@ -71,7 +71,7 @@ Connect-Flash:
         - Module: https://github.com/jaredhanson/passport-google-oauth2
         - npm install --save passport-google-oauth20
 
-BcryptJS:
+BcryptJS (UNUSED - no local DB for storing username/passwords):
 - Module: https://www.npmjs.com/package/bcryptjs
 - npm install --save bcryptjs
 - Hashes passwords before storing them in the DB (never store plaintext passwords in db)
